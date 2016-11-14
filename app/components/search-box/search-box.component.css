@@ -1,0 +1,21 @@
+div {
+    padding: 10px 0;
+}
+
+i {
+    font-size: 1.5em;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    margin: 0;
+}
+
+input:focus {
+    border: 0;
+}

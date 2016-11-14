@@ -1,0 +1,86 @@
+:host {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 660px;
+}
+
+input[type="text"],
+textarea {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: rgba(0, 0, 0, .8);
+}
+
+input[type="text"] {
+    height: 52px;
+    padding: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.028em;
+}
+
+textarea {
+    padding: 0;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.003em;
+    resize: none;
+    min-height: 34px;
+    border: 1px solid transparent;
+}
+
+::-webkit-input-placeholder {
+    color: #b3b3b1;
+}
+
+button[type="submit"]:disabled {
+    border-color: #b3b3b1 !important;
+    color: #b3b3b1 !important;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 100;
+}
+
+.radio-input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: -3px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 100%;
+}
+
+.radio-input.active::after {
+    content: '';
+    position: relative;
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    top: 2px;
+    display: block;
+    background-color: #02b875;
+    border-radius: 100%;
+}
+
+input[type="datetime-local"] {
+    border: none;
+    border-bottom: 1px solid #b3b3b1;
+    background-color: transparent;
+    padding: 6px 2px;
+    margin-left: 32px;
+}
+
+::-webkit-clear-button {
+    opacity: 0;
+    pointer-events: none;
+}

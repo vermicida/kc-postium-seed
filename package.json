@@ -1,0 +1,42 @@
+{
+  "name": "kcpostium-seed",
+  "version": "1.0.0",
+  "description": "Seed de la práctica Angular 2 para el Web Development Bootcamp de KeepCoding.",
+  "license": "ISC",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"npm run backend\" \"lite-server\"",
+    "backend": "json-server db.json --port 3004",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "clean": "rm -rf ./out"
+  },
+  "dependencies": {
+    "@angular/common": "~2.1.1",
+    "@angular/compiler": "~2.1.1",
+    "@angular/core": "~2.1.1",
+    "@angular/forms": "~2.1.1",
+    "@angular/http": "~2.1.1",
+    "@angular/platform-browser": "~2.1.1",
+    "@angular/platform-browser-dynamic": "~2.1.1",
+    "@angular/router": "~3.1.1",
+    "@angular/upgrade": "~2.1.1",
+    "angular-in-memory-web-api": "~0.1.13",
+    "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.16.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "skeleton-css": "^2.0.4",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "concurrently": "^3.0.0",
+    "json-server": "^0.8.23",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.0.3"
+  }
+}

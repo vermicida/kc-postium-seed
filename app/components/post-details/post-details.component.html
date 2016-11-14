@@ -1,0 +1,39 @@
+<div class="metadata">
+    <div class="avatar">
+        <img [src]="post.author.avatar">
+    </div>
+    <div class="author">
+        <!--
+        |-----------------------------------------------------------------|
+        | Red Path                                                        |
+        |-----------------------------------------------------------------|
+        | Un clic sobre el autor debería navegar a su colección de posts. |
+        |-----------------------------------------------------------------|
+        -->
+        <span class="name blink-font">{{ post.author.name }}</span>
+        <!--
+        |-------------------------------------------------------------------------------|
+        | Blue Path                                                                     |
+        |-------------------------------------------------------------------------------|
+        | Una vez tengas creado el pipe FromNowPipe, úsalo con la fecha de publicación. |
+        |-------------------------------------------------------------------------------|
+        -->
+        <span class="date">{{ post.publicationDate }}</span>
+    </div>
+</div>
+<div class="post">
+    <h3>{{ post.title }}</h3>
+    <img *ngIf="post.media" [src]="post.media" class="u-max-full-width">
+    <div class="html-text" [innerHtml]="plainTextToHtml(post.intro)"></div>
+    <hr>
+    <div class="html-text" [innerHtml]="plainTextToHtml(post.body)"></div>
+    <!--
+    |--------------------------------------------------------------------------|
+    | Yellow Path                                                              |
+    |--------------------------------------------------------------------------|
+    | Suscribe el componente CategoryBoxComponent al evento que hayas definido |
+    | en él para notificar los clics sobre las categorías del post.            |
+    |--------------------------------------------------------------------------|
+    -->
+    <category-box [categories]="post.categories"></category-box>
+</div>

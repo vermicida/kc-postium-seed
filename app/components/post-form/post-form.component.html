@@ -1,0 +1,77 @@
+<!--
+|---------------------------------------------------------------------------------------------|
+| Purple Path                                                                                 |
+|---------------------------------------------------------------------------------------------|
+| Crea una 'template reference variable' del formulario: quizá la necesites. Además, suscribe |
+| el formulario al evento correspondiente para hacer 'submit' del mismo: no olvides pasar la  |
+| referencia del formulario en él.                                                            |
+|---------------------------------------------------------------------------------------------|
+-->
+<form novalidate>
+    <!--
+    |-------------------------------------------------------------------------------------------------|
+    | Purple Path                                                                                     |
+    |-------------------------------------------------------------------------------------------------|
+    | El campo 'title' debe enlazarse al formulario a través de la directiva 'ngModel'. Recuerda usar |
+    | el nombre que se ha definido en la entidad Post. Además, este campo debe ser obligatorio.       |
+    |-------------------------------------------------------------------------------------------------|
+    -->
+    <input
+        type="text"
+        placeholder="Título"
+        class="u-full-width">
+    <!--
+    |-------------------------------------------------------------------------------------------------|
+    | Purple Path                                                                                     |
+    |-------------------------------------------------------------------------------------------------|
+    | El campo 'intro' debe enlazarse al formulario a través de la directiva 'ngModel'. Recuerda usar |
+    | el nombre que se ha definido en la entidad Post. Además, este campo debe ser obligatorio.       |
+    |-------------------------------------------------------------------------------------------------|
+    -->
+    <textarea
+        placeholder="Introduce tu historia"
+        class="u-full-width georgia-font"
+        autogrow></textarea>
+    <!--
+    |-------------------------------------------------------------------------------------------------|
+    | Purple Path                                                                                     |
+    |-------------------------------------------------------------------------------------------------|
+    | El campo 'body' debe enlazarse al formulario a través de la directiva 'ngModel'. Recuerda usar  |
+    | el nombre que se ha definido en la entidad Post. Además, este campo debe ser obligatorio.       |
+    |-------------------------------------------------------------------------------------------------|
+    -->
+    <textarea
+        placeholder="Cuenta tu historia"
+        class="u-full-width georgia-font"
+        autogrow></textarea>
+    <div>
+        <div>
+            <label (click)="setScheduling(false)">
+                <span class="radio-input" [class.active]="!publicationDateScheduled"></span>
+                No programar
+            </label>
+        </div>
+        <div>
+            <label (click)="setScheduling(true)">
+                <span class="radio-input" [class.active]="publicationDateScheduled"></span>
+                Publicar en:
+            </label>
+        </div>
+        <div>
+            <input
+                type="datetime-local"
+                name="publicationDate"
+                [min]="nowDatetimeLocal"
+                [ngModel]="nowDatetimeLocal">
+        </div>
+    </div>
+    <!--
+    |--------------------------------------------------------------------------|
+    | Purple Path                                                              |
+    |--------------------------------------------------------------------------|
+    | Deshabilita el botón 'Publicar' en caso de que el formulario no sea      |
+    | válido. Para ello vas a necesitar acceder al 'FormGroup' del formulario. |
+    |--------------------------------------------------------------------------|
+    -->
+    <button type="submit" class="button-primary u-pull-right">Publicar</button>
+</form>

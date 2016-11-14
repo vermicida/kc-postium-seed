@@ -1,0 +1,11 @@
+<div>
+    <i class="fa fa-search"
+       aria-hidden="true"
+       (click)="showSearchInput()"></i>
+    <input
+        type="text"
+        placeholder="Busca en Postium"
+        [@searchinput]="searchInputAnimationState"
+        (blur)="hideSearchInput($event)"
+        (keyup)="notifySearch($event)" />
+</div>

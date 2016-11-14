@@ -1,0 +1,71 @@
+:host {
+    display: block;
+    border-radius: 3px;
+    margin-bottom: 40px;
+    padding: 20px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 660px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    border: 1px solid rgba(0, 0, 0, .09);
+    color: rgba(0, 0, 0, .8);
+}
+
+.metadata .avatar,
+.metadata .author {
+    display: inline-block;
+}
+
+.metadata .avatar img {
+    border-radius: 50%;
+    max-width: 40px;
+}
+
+.metadata .author {
+    margin-left: 10px;
+}
+
+.metadata .author .name {
+    display: block;
+    margin-top: -6px;
+    color: #00ab6b;
+}
+
+.metadata .author .name:hover {
+    cursor: pointer;
+}
+
+.metadata .author .date {
+    display: block;
+    color: rgba(0, 0, 0, .44);
+    font-size: 0.8em;
+}
+
+.post {
+    margin-top: 10px;
+}
+
+.post h3 {
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 1.04;
+    letter-spacing: -.028em;
+}
+
+.post img {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.post .html-text {
+    font-family:
+        Georgia,
+        Cambria,
+        "Times New Roman",
+        Times,serif;
+    font-size: 18px;
+    line-height: 1.58;
+    letter-spacing: -.004em;
+    margin: 0;
+}

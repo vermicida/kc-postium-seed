@@ -1,0 +1,19 @@
+<!--
+|--------------------------------------------------------------------------|
+| Red Path                                                                 |
+|--------------------------------------------------------------------------|
+| Suscribe el componente PostPreviewComponent al evento que hayas definido |
+| en él para notificar los clics sobre los autores de los posts.           |
+|--------------------------------------------------------------------------|
+-->
+
+<!--
+|--------------------------------------------------------------------------|
+| Green Path                                                               |
+|--------------------------------------------------------------------------|
+| Suscribe el componente PostPreviewComponent al evento que hayas definido |
+| en él para notificar los clics sobre los posts.                          |
+|--------------------------------------------------------------------------|
+-->
+
+<post-preview *ngFor="let post of posts" [post]="post"></post-preview>
