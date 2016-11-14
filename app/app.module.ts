@@ -3,6 +3,12 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { NgModule } from "@angular/core";
 
+/*----------------------------------------------------------|
+ | ~~~ Blue Path ~~~                                        |
+ |----------------------------------------------------------|
+ | Importa FromNowPipe para poder usarlo en este documento. |
+ |----------------------------------------------------------*/
+
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app.routing";
 import { AutoGrowDirective } from "./directives/auto-grow.directive";
@@ -10,7 +16,6 @@ import { BackendUriProvider} from "./services/settings.service";
 import { CategoryBoxComponent } from "./components/category-box/category-box.component";
 import { CategoryPostsComponent } from "./components/category-posts/category-posts.component";
 import { CategoryService } from "./services/category.service";
-// import { FromNowPipe } from "./pipes/from-now.pipe";
 import { HeaderBarComponent } from "./components/header-bar/header-bar.component";
 import { NewsComponent } from "./components/news/news.component";
 import { NewStoryComponent } from "./components/new-story/new-story.component";
@@ -31,13 +36,19 @@ import { UserPostsComponent } from "./components/user-posts/user-posts.component
         FormsModule,
         HttpModule
     ],
+
+    /*-----------------------------------------------|
+     | ~~~ Blue Path ~~~                             |
+     |-----------------------------------------------|
+     | No olvides declarar FromNowPipe en el módulo. |
+     |-----------------------------------------------*/
+
     declarations: [
         AppComponent,
         AutoGrowDirective,
         CategoryBoxComponent,
         CategoryPostsComponent,
         HeaderBarComponent,
-        // FromNowPipe,
         NewsComponent,
         NewStoryComponent,
         PostDetailsComponent,

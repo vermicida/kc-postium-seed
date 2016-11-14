@@ -22,7 +22,7 @@ export class PostService {
          | cuenta su fecha de publicación. Filtra también aquellos que aún no están publicados, pues no |
          | deberían mostrarse al usuario.                                                               |
          |                                                                                              |
-         | En la documentación de 'json-server' tienes detallado cómo hacer el filtrado y ordenación de |
+         | En la documentación de 'JSON Server' tienes detallado cómo hacer el filtrado y ordenación de |
          | los datos en tus peticiones, pero te ayudo igualmente. La querystring debe tener estos       |
          | parámetros:                                                                                  |
          |                                                                                              |
@@ -45,7 +45,7 @@ export class PostService {
          | que retorne solo los posts que buscamos. Ten en cuenta que, además, deben estar ordenados    |
          | por fecha de publicación descendente y obtener solo aquellos que estén publicados.           |
          |                                                                                              |
-         | En la documentación de 'json-server' tienes detallado cómo hacer el filtrado y ordenación de |
+         | En la documentación de 'JSON Server' tienes detallado cómo hacer el filtrado y ordenación de |
          | los datos en tus peticiones, pero te ayudo igualmente. La querystring debe tener estos       |
          | parámetros:                                                                                  |
          |                                                                                              |
@@ -70,12 +70,12 @@ export class PostService {
          | por fecha de publicación descendente y obtener solo aquellos que estén publicados.               |
          |                                                                                                  |
          | Este Path tiene un extra de dificultad: un objeto Post tiene una colección de objetos Categoria, |
-         | y 'json-server' no permite filtrado en colecciones anidadas. Por tanto, te toca a ti darle una   |
+         | y 'JSON Server' no permite filtrado en colecciones anidadas. Por tanto, te toca a ti darle una   |
          | solución a este marrón. Una posibilidad sería aprovechar el operador 'map' de los observables.   |
          | Sirven para transformar flujos de datos y, de alguna forma, es lo que vamos buscando. Podríamos  |
          | obtener todos los posts y luego filtrarlos por categoría en 'map'. Ahí te lo dejo.               |
          |                                                                                                  |
-         | En la documentación de 'json-server' tienes detallado cómo hacer el filtrado y ordenación de los |
+         | En la documentación de 'JSON Server' tienes detallado cómo hacer el filtrado y ordenación de los |
          | datos en tus peticiones, pero te ayudo igualmente. La querystring debe tener estos parámetros:   |
          |                                                                                                  |
          |   - Filtro por fecha de publicación: publicationDate_lte=x (siendo x la fecha actual)            |
