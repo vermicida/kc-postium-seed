@@ -24,7 +24,7 @@ export class User {
             "KeepCoder",
             "keepcoder",
             "keepcoder@postium.com",
-            "images/keepcoder.jpg"
+            "resources/images/keepcoder.jpg"
         )
     }
 }
