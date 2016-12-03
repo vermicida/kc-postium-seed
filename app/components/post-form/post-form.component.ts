@@ -47,7 +47,7 @@ export class PostFormComponent implements OnInit {
         return publicationDate.getTime();
     }
 
-    setScheduling(schedule: true): void {
+    setScheduling(schedule: boolean): void {
         this.publicationDateScheduled = schedule;
     }
 
