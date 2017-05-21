@@ -50,7 +50,7 @@ Entidad `Post`:
 - `publicationDate` de tipo `number`.
 - `categories` de tipo `Category[]`.
 - `author` de tipo `User`.
-- `likes` de tipo `number`.
+- `likes` de tipo `number[]`.
 
 Entidad `User`:
 
@@ -73,9 +73,16 @@ Antes de empezar a completar **Postium**, que sé que tienes ganas, tienes que c
 $ git clone https://github.com/vermicida/kc-postium-seed.git
 ```
 
+Recuerda que debes teber instalado [Angular CLI](https://cli.angular.io) a nivel global para trabajar con **Postium**:
+
+```bash
+$ npm install -g @angular/cli
+```
+
 Una vez descargado y descomprimido, o bien clonado, vamos al directorio correspondiente e instalamos las dependencias:
 
 ```bash
+$ cd kc-postium-seed
 $ npm install
 ```
 
@@ -99,10 +106,10 @@ Dependencias:
 
 Documentos:
 
-- app/components/post-details/**post-details.component.html**
-- app/components/post-preview/**post-preview.component.html**
-- app/pipes/**from-now.pipe.ts**
-- app/**app.module.ts**
+- src/app/post-details/**post-details.component.html**
+- src/app/post-preview/**post-preview.component.html**
+- src/app/**from-now.pipe.ts**
+- src/app/**app.module.ts**
 
 Qué practicamos:
 
@@ -118,7 +125,7 @@ Dependencias:
 
 Documentos:
 
-- app/services/**post.service.ts**
+- src/app/**post.service.ts**
 
 Qué practicamos:
 
@@ -134,10 +141,10 @@ Dependencias:
 
 Documentos:
 
-- app/components/post-preview/**post-preview.component.html**
-- app/components/post-preview/**post-preview.component.ts**
-- app/components/posts-list/**posts-list.component.html**
-- app/components/posts-list/**posts-list.component.ts**
+- src/app/post-preview/**post-preview.component.html**
+- src/app/post-preview/**post-preview.component.ts**
+- src/app/posts-list/**posts-list.component.html**
+- src/app/posts-list/**posts-list.component.ts**
 
 Qué practicamos:
 
@@ -153,14 +160,14 @@ Dependencias:
 
 Documentos:
 
-- app/components/post-details/**post-details.component.html**
-- app/components/post-details/**post-details.component.ts**
-- app/components/post-preview/**post-preview.component.html**
-- app/components/post-preview/**post-preview.component.ts**
-- app/components/posts-list/**posts-list.component.html**
-- app/components/posts-list/**posts-list.component.ts**
-- app/services/**post.service.ts**
-- app/services/**posts-resolve.service.ts**
+- src/app/post-details/**post-details.component.html**
+- src/app/post-details/**post-details.component.ts**
+- src/app/post-preview/**post-preview.component.html**
+- src/app/post-preview/**post-preview.component.ts**
+- src/app/posts-list/**posts-list.component.html**
+- src/app/posts-list/**posts-list.component.ts**
+- src/app/**post.service.ts**
+- src/app/**posts-resolve.service.ts**
 
 Qué practicamos:
 
@@ -178,12 +185,12 @@ Dependencias:
 
 Documentos:
 
-- app/components/post-details/**post-details.component.html**
-- app/components/post-details/**post-details.component.ts**
-- app/components/category-box/**category-box.component.html**
-- app/components/category-box/**category-box.component.ts**
-- app/services/**post.service.ts**
-- app/services/**posts-resolve.service.ts**
+- src/app/category-box/**category-box.component.html**
+- src/app/category-box/**category-box.component.ts**
+- src/app/post-details/**post-details.component.html**
+- src/app/post-details/**post-details.component.ts**
+- src/app/**post.service.ts**
+- src/app/**posts-resolve.service.ts**
 
 Qué practicamos:
 
@@ -201,10 +208,10 @@ Dependencias:
 
 Documentos:
 
-- app/components/header-bar/**header-bar.component.html**
-- app/components/post-form/**post-form.component.html**
-- app/components/post-form/**post-form.component.ts**
-- app/services/**post.service.ts**
+- src/app/header-bar/**header-bar.component.html**
+- src/app/post-form/**post-form.component.html**
+- src/app/post-form/**post-form.component.ts**
+- src/app/**post.service.ts**
 
 Qué practicamos:
 
@@ -217,6 +224,10 @@ Como te decía más arriba, estos **Paths** son opcionales y por ello los he tit
 
 En esta ocasión tan solo voy a contarte qué hacer en cada **Path**, pero no voy a guiarte con comentarios en el código. Como dice mi profesor de guitarra, _esto ya es pipí de mayores_. Intenta implementar por tu cuenta las soluciones, unque eso no quita que pueda echarte una mano si me lo pides.
 
+### Blue Hostess Path (AKA Azul Azafata): Testing
+
+Al principio de los tiempos, cuando clonaste el repositorio de **Postium**, la aplicación pasaba todos los tests indicados en los documentos de especificación, pero ahora que has implementado un montón de **Paths**, muchos de ellos fallan. ¿Te ves capaz de poner un poco de orden en todos aquellos tests que fallen? Es poca cosa, sobre todo nuevas inyecciones de dependencias. ¡Dale duro!
+
 ### Broken White Path (AKA Blanco Roto): Edición de posts
 
 Menudo portal el **Postium** este, que te equivocas de imagen al crear una nueva historia y pones la de tu abuela en bikini en la playa de La Malagueta el año pasado, y ¡no puedes editar el post!. Tu abuela queda inmortalizada en la web hasta el día del juicio final por la tarde. No pasa nada, para eso estás tú, para darle una solución a este _problemilla_. ¿Podrías añadir a **Postium** la posibilidad de editar los posts que hayas creado con tu usuario?.
@@ -227,7 +238,7 @@ Menudo portal el **Postium** este, que te equivocas de imagen al crear una nueva
 
 Estamos acustumbrados al puñetero botón de like en todos los servicios web que utilizamos a diario, pero **Postium** no lo tiene. La entidad `Post` ya almacena ese dato, así que parte del recorrido ya está hecho. Habría que hacer un nuevo componente para la vista en detalle del post que muestre el número de likes actual y, de paso, me permita a mí hacer like también. Ojo: el like debe persistirse en servidor y solo puede hacerse uno sobre el mismo post.
 
-**Pista:** hay que persistir de alguna forma los likes que he hecho para evitar que pueda hacer varios sobre un mismo post. 
+**Pista:** hay que persistir de alguna forma los likes que he hecho para evitar que pueda hacer varios sobre un mismo post. No te compliques intentando implementar una sesión de usuario o similar: ve a lo sencillo.
 
 ### Red Wine Path (AKA Vino Tinto): Búsqueda
 

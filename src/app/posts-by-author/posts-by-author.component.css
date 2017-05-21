@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 702px;
+  color: rgba(0, 0, 0, .8);
+}
+
+.posts-by-author h2 {
+  line-height: 1.2;
+  font-weight: 700 !important;
+  font-size: 20px!important;
+  border-bottom: 1px solid rgba(0,0,0,.44) !important;
+  padding-bottom: 20px !important;
+  margin-bottom: 28px !important;
+}
