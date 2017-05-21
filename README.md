@@ -1,6 +1,6 @@
 # angular4-web-test-directions
 
-**Postium** es un _amago_ de clon de [Medium](https://medium.com/). Sus pretensiones son mucho más humildes que las del conocido portal, pero a la vez contribuyen a una grandiosa causa: que aprendas a familiarizarte con Angular 2.
+**Postium** es un _amago_ de clon de [Medium](https://medium.com/). Sus pretensiones son mucho más humildes que las del conocido portal, pero a la vez contribuyen a una grandiosa causa: que aprendas a familiarizarte con Angular.
 
 Lee detenidamente estas instrucciones **hasta el final**, las vas a necesitar para completar la práctica.
 
@@ -22,9 +22,9 @@ Los **Paths** están distribuidos por colores. Cuando navegues por el código de
 
 Visto ese comentario, y siempre que estés completando ese **Path** concreto al que se hace referencia, ponte el mono de trabajo y _¡al lío!_. En cualquier caso, más abajo en cada **Path** te explico en qué consiste y qué documentos requieren tu atención.
 
-Una vez completados los **Paths** obligatorios, tienes otros tres opcionales más por hacer si es que te ves con fuerzas. No son complejos, pero te quito los _ruedines_ y te dejo solo con ellos; no tienes instrucciones ni ayuda en los comentarios, por tanto te va a tocar tirar de ingenio y razonar la posible solución. Sé que es un último empujón y que probablemente llegues cansado a este punto, pero te recomiendo encarecidamente que intentes hacerlo. Si no llegas a tiempo para entregar la práctica con ellos, no te agobies lo más mínimo; ve rascando pequeños huecos e intenta implementarlos. La idea es que aprendas a trabajar con Angular 2, y qué mejor que dedicándole tiempo y esfuerzo.
+Una vez completados los **Paths** obligatorios, tienes otros tres opcionales más por hacer si es que te ves con fuerzas. No son complejos, pero te quito los _ruedines_ y te dejo solo con ellos; no tienes instrucciones ni ayuda en los comentarios, por tanto te va a tocar tirar de ingenio y razonar la posible solución. Sé que es un último empujón y que probablemente llegues cansado a este punto, pero te recomiendo encarecidamente que intentes hacerlo. Si no llegas a tiempo para entregar la práctica con ellos, no te agobies lo más mínimo; ve rascando pequeños huecos e intenta implementarlos. La idea es que aprendas a trabajar con Angular, y qué mejor que dedicándole tiempo y esfuerzo.
 
-Por cierto, por si te lo habías preguntado: no tienes que tocar ni una sola línea de CSS, y las que tienes que tocar de HTML, que son pocas, son del lenguaje de templates de Angular 2. La idea de esta práctica es que te centres en la parte funcional, en Angular, y dejes aparcado todo lo contextual. Si te sientes creativo y quieres tocar algo de los estilos o de la maquetación siéntete con total libertad para hacerlo, siempre que tengas en cuenta que no es necesario y los **Paths** obligatorios hay que hacerlos sí o sí.
+Por cierto, por si te lo habías preguntado: no tienes que tocar ni una sola línea de CSS, y las que tienes que tocar de HTML, que son pocas, son del lenguaje de templates de Angular. La idea de esta práctica es que te centres en la parte funcional, en Angular, y dejes aparcado todo lo contextual. Si te sientes creativo y quieres tocar algo de los estilos o de la maquetación siéntete con total libertad para hacerlo, siempre que tengas en cuenta que no es necesario y los **Paths** obligatorios hay que hacerlos sí o sí.
 
 Hagas o no los **Optional Paths**, puedas terminar o no los obligatorios, te guste Java o COBOL, el metal o el reggaeton, yo estaré encantado de ayudarte. Ya sabes dónde localizarme.
 
