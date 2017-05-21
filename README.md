@@ -1,4 +1,4 @@
-# angular2-test-directions
+# angular4-web-test-directions
 
 **Postium** es un _amago_ de clon de [Medium](https://medium.com/). Sus pretensiones son mucho más humildes que las del conocido portal, pero a la vez contribuyen a una grandiosa causa: que aprendas a familiarizarte con Angular 2.
 
