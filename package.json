@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "json-server ./src/db.json --port 3004"
+    "server": "json-server ./db.json --port 3004"
   },
   "private": true,
   "dependencies": {
