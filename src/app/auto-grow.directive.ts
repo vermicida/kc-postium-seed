@@ -5,7 +5,7 @@ import { Directive, AfterContentChecked, ElementRef, HostListener } from '@angul
 })
 export class AutoGrowDirective implements AfterContentChecked {
 
-  @HostListener("input", ["$event.target"])
+  @HostListener('input', ['$event.target'])
   onInput(area: HTMLTextAreaElement): void {
     this._resize();
   }
@@ -17,7 +17,7 @@ export class AutoGrowDirective implements AfterContentChecked {
   }
 
   private _resize(): void {
-    this._elementRef.nativeElement.style.overflow = "hidden";
+    this._elementRef.nativeElement.style.overflow = 'hidden';
     this._elementRef.nativeElement.style.height = `${this._elementRef.nativeElement.scrollHeight}px`;
   }
 

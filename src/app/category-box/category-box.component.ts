@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
-import { Category } from './../category';
+import { Category } from '../category';
 
 @Component({
-  selector: 'category-box',
+  selector: 'app-category-box',
   templateUrl: './category-box.component.html',
   styleUrls: ['./category-box.component.css']
 })

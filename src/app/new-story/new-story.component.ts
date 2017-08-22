@@ -1,14 +1,13 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from "rxjs/Subscription";
+import { Subscription } from 'rxjs/Subscription';
 
-import { Post } from './../post';
-import { PostService } from './../post.service';
+import { Post } from '../post';
+import { PostService } from '../post.service';
 
 @Component({
-  selector: 'new-story',
-  templateUrl: './new-story.component.html',
-  styleUrls: ['./new-story.component.css']
+  selector: 'app-new-story',
+  templateUrl: './new-story.component.html'
 })
 export class NewStoryComponent implements OnDestroy {
 

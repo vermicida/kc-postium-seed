@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Category } from './../category';
-import { NativeWindow } from './../window';
-import { Post } from './../post';
+import { Category } from '../category';
+import { NativeWindow } from '../window';
+import { Post } from '../post';
 
 @Component({
   templateUrl: './posts-by-category.component.html',

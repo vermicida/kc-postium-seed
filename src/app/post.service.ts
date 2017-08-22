@@ -1,17 +1,16 @@
 import { Injectable, Inject } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/map";
+import { HttpClient } from '@angular/common/http';
 
-import { BackendUri } from './settings';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+import { environment } from '../environments/environment';
 import { Post } from './post';
 
 @Injectable()
 export class PostService {
 
-  constructor(
-    private _http: Http,
-    @Inject(BackendUri) private _backendUri) { }
+  constructor(private _http: HttpClient) { }
 
   getPosts(): Observable<Post[]> {
 
@@ -28,11 +27,11 @@ export class PostService {
      |                                                                                              |
      |   - Filtro por fecha de publicación: publicationDate_lte=x (siendo x la fecha actual)        |
      |   - Ordenación: _sort=publicationDate&_order=DESC                                            |
+     |                                                                                              |
+     | Una pista más, por si acaso: HttpParams.                                                     |
      |----------------------------------------------------------------------------------------------*/
 
-    return this._http
-      .get(`${this._backendUri}/posts`)
-      .map((response: Response): Post[] => Post.fromJsonToList(response.json()));
+    return this._http.get<Post[]>(`${environment.backendUri}/posts`);
   }
 
   getUserPosts(id: number): Observable<Post[]> {
@@ -54,9 +53,7 @@ export class PostService {
      |   - Ordenación: _sort=publicationDate&_order=DESC                                            |
      |----------------------------------------------------------------------------------------------*/
 
-    return this._http
-      .get(`${this._backendUri}/posts`)
-      .map((response: Response): Post[] => Post.fromJsonToList(response.json()));
+     return this._http.get<Post[]>(`${environment.backendUri}/posts`);
   }
 
   getCategoryPosts(id: number): Observable<Post[]> {
@@ -82,15 +79,11 @@ export class PostService {
      |   - Ordenación: _sort=publicationDate&_order=DESC                                                |
      |--------------------------------------------------------------------------------------------------*/
 
-    return this._http
-      .get(`${this._backendUri}/posts`)
-      .map((response: Response): Post[] => Post.fromJsonToList(response.json()));
+     return this._http.get<Post[]>(`${environment.backendUri}/posts`);
   }
 
   getPostDetails(id: number): Observable<Post> {
-    return this._http
-      .get(`${this._backendUri}/posts/${id}`)
-      .map((response: Response): Post => Post.fromJson(response.json()));
+    return this._http.get<Post>(`${environment.backendUri}/posts/${id}`);
   }
 
   createPost(post: Post): Observable<Post> {
@@ -101,8 +94,7 @@ export class PostService {
      | Utiliza el cliente HTTP para guardar en servidor el post indicado. La ruta sobre |
      | la cual tienes que hacer la petición POST es '/posts'. Recuerda que siempre que  |
      | se crea una entidad en servidor es una buena práctica retornar la misma con los  |
-     | datos actualizados obtenidos tras la inserción; puedes usar la función estática  |
-     | 'fromJson() para crar un nuevo objeto Post basado en la respuesta HTTP obtenida. |
+     | datos actualizados obtenidos tras la inserción.                                  |
      |----------------------------------------------------------------------------------*/
 
     return null;

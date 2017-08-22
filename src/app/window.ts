@@ -1,4 +1,4 @@
-import { InjectionToken, ValueProvider } from "@angular/core";
+import { InjectionToken, ValueProvider } from '@angular/core';
 
 export const NativeWindow: InjectionToken<string> = new InjectionToken<string>('NativeWindow');
 

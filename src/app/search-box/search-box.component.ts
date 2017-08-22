@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { animate, trigger, state, style, transition } from '@angular/animations';
 
 @Component({
-  selector: 'search-box',
+  selector: 'app-search-box',
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.css'],
   animations: [

@@ -18,7 +18,7 @@ Los **Paths** están distribuidos por colores. Cuando navegues por el código de
  | dada, retornar una cadena de texto que exprese el tiempo que ha  |
  | pasado desde dicha fecha hasta ahora.                            |
  |------------------------------------------------------------------*/
-``` 
+```
 
 Visto ese comentario, y siempre que estés completando ese **Path** concreto al que se hace referencia, ponte el mono de trabajo y _¡al lío!_. En cualquier caso, más abajo en cada **Path** te explico en qué consiste y qué documentos requieren tu atención.
 
@@ -28,15 +28,7 @@ Por cierto, por si te lo habías preguntado: no tienes que tocar ni una sola lí
 
 Hagas o no los **Optional Paths**, puedas terminar o no los obligatorios, te guste Java o COBOL, el metal o el reggaeton, yo estaré encantado de ayudarte. Ya sabes dónde localizarme.
 
-## Estructura del proyecto
-
-Aunque el árbol del proyecto sea sencillo y esté muy claro, te detallo donde está cada cosa:
-
-- **app/components**: en esta ruta tienes los Componentes de la app.
-- **app/directives**: en esta ruta tienes las Directivas de la app.
-- **app/models**: en esta ruta tienes las Entidades de la app.
-- **app/pipes**: en esta ruta tienes los Pipes de la app.
-- **app/services**: en esta ruta tienes los Servicios y Resolves de la app.
+## Entidades
 
 Aprovecho este momento para contarte un poco sobre las entidades. Son estas tres: `Post`, `User` y `Category`. Como puedes imaginar, la entidad `Post` es la que más peso tiene y sobre la que gira **Postium**. Tiene todos los atributos necesarios para almacenar los datos propios de un post, además de mantener relación con `User` para establecer el autor del mismo y con `Category` para enlazar las categorías en las que se publica. Están definidas de la siguiente forma:
 

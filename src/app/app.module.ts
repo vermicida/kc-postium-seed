@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 /*----------------------------------------------------------|
@@ -12,9 +12,8 @@ import { NgModule } from '@angular/core';
  |----------------------------------------------------------*/
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AutoGrowDirective } from './auto-grow.directive';
-import { BackendUriProvider } from './settings';
 import { CategoryBoxComponent } from './category-box/category-box.component';
 import { CategoryResolveService } from './category-resolve.service';
 import { CategoryService } from './category.service';
@@ -32,6 +31,7 @@ import { PostsResolveService } from './posts-resolve.service';
 import { PostsViewComponent } from './posts-view/posts-view.component';
 import { PostService } from './post.service';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { UserService } from './user.service';
 
 @NgModule({
   imports: [
@@ -39,7 +39,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
 
   /*-----------------------------------------------|
@@ -64,13 +64,13 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     SearchBoxComponent
   ],
   providers: [
-    BackendUriProvider,
     CategoryResolveService,
     CategoryService,
     NativeWindowProvider,
     PostDetailsResolveService,
     PostService,
-    PostsResolveService
+    PostsResolveService,
+    UserService
   ],
   bootstrap: [
     AppComponent

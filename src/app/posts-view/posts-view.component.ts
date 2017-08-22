@@ -1,12 +1,11 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { NativeWindow } from './../window';
-import { Post } from './../post';
+import { NativeWindow } from '../window';
+import { Post } from '../post';
 
 @Component({
-  templateUrl: './posts-view.component.html',
-  styleUrls: ['./posts-view.component.css']
+  templateUrl: './posts-view.component.html'
 })
 export class PostsViewComponent implements OnInit {
 
@@ -17,8 +16,12 @@ export class PostsViewComponent implements OnInit {
     @Inject(NativeWindow) private _window) { }
 
   ngOnInit(): void {
-    this._activatedRoute.data.subscribe((data: { posts: Post[] }) => this.posts = data.posts);
-    this._window.scrollTo(0, 0);
+    this._activatedRoute
+        .data
+        .subscribe((data: { posts: Post[] }) => {
+          this.posts = data.posts;
+          this._window.scrollTo(0, 0);
+        });
   }
 
 }
