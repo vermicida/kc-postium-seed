@@ -31,6 +31,7 @@ import { PostsResolveService } from './posts-resolve.service';
 import { PostsViewComponent } from './posts-view/posts-view.component';
 import { PostService } from './post.service';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { UserService } from './user.service';
 
 @NgModule({
   imports: [
@@ -68,7 +69,8 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     NativeWindowProvider,
     PostDetailsResolveService,
     PostService,
-    PostsResolveService
+    PostsResolveService,
+    UserService
   ],
   bootstrap: [
     AppComponent
