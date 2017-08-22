@@ -1,9 +1,9 @@
 import { AutoGrowDirective } from './auto-grow.directive';
 
-xdescribe('AutoGrowDirective', () => {
+describe('AutoGrowDirective', () => {
 
-  xit('Debería instanciarse', () => {
-    const directive = new AutoGrowDirective();
+  it('Debería instanciarse', () => {
+    const directive = new AutoGrowDirective(null);
     expect(directive).toBeTruthy();
   });
 

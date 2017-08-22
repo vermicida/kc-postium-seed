@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { Post } from './../post';
+import { Post } from '../post';
 
 @Component({
-  selector: 'posts-list',
+  selector: 'app-posts-list',
   templateUrl: './posts-list.component.html',
-  styleUrls: ['./posts-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostsListComponent {

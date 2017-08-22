@@ -1,9 +1,9 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 
-import { PostService } from './post.service';
+import { UserService } from './user.service';
 
-describe('PostService', () => {
+describe('UserService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -11,12 +11,12 @@ describe('PostService', () => {
         HttpClientModule
       ],
       providers: [
-        PostService
+        UserService
       ]
     });
   });
 
-  it('Debería instanciarse', inject([PostService], (service: PostService) => {
+  it('Debería instanciarse', inject([UserService], (service: UserService) => {
     expect(service).toBeTruthy();
   }));
 

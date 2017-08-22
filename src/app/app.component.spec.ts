@@ -35,7 +35,7 @@ describe('AppComponent', () => {
   });
 
   it('Debería existir una directiva RouterOutlet', () => {
-    let de = fixture.debugElement.query(By.directive(RouterOutlet));
+    const de = fixture.debugElement.query(By.directive(RouterOutlet));
     expect(de).not.toBeNull();
   });
 

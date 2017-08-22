@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { NativeWindow } from './../window';
-import { Post } from './../post';
+import { NativeWindow } from '../window';
+import { Post } from '../post';
 
 @Component({
   templateUrl: './post-details.component.html',
@@ -17,12 +17,16 @@ export class PostDetailsComponent implements OnInit {
     @Inject(NativeWindow) private _window) { }
 
   ngOnInit(): void {
-    this._activatedRoute.data.subscribe((data: { post: Post }) => this.post = data.post);
-    this._window.scrollTo(0, 0);
+    this._activatedRoute
+        .data
+        .subscribe((data: { post: Post }) => {
+          this.post = data.post;
+          this._window.scrollTo(0, 0);
+        });
   }
 
   plainTextToHtml(text: string): string {
-    return text ? `<p>${text.replace(/\n/gi, "</p><p>")}</p>` : '';
+    return text ? `<p>${text.replace(/\n/gi, '</p><p>')}</p>` : '';
   }
 
   /*---------------------------------------------------------------------------------------------------------------|

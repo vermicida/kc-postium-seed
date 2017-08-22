@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve } from "@angular/router";
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+
 import { Observable } from 'rxjs/Observable';
 
 import { Post } from './post';
@@ -11,7 +12,7 @@ export class PostDetailsResolveService implements Resolve<Post> {
   constructor(private _postService: PostService) { }
 
   resolve(route: ActivatedRouteSnapshot): Observable<Post> {
-    return this._postService.getPostDetails(+route.params["postId"]);
+    return this._postService.getPostDetails(+route.params['postId']);
   }
 
 }

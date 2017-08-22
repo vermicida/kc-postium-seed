@@ -1,7 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
-import { BackendUriProvider } from './settings';
 import { PostService } from './post.service';
 import { PostsResolveService } from './posts-resolve.service';
 
@@ -10,10 +9,9 @@ describe('PostsResolveService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpModule
+        HttpClientModule
       ],
       providers: [
-        BackendUriProvider,
         PostService,
         PostsResolveService
       ]

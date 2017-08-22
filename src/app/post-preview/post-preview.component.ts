@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
-import { Post } from './../post';
+import { Post } from '../post';
 
 @Component({
-  selector: 'post-preview',
+  selector: 'app-post-preview',
   templateUrl: './post-preview.component.html',
   styleUrls: ['./post-preview.component.css']
 })
@@ -28,7 +28,7 @@ export class PostPreviewComponent {
    |------------------------------------------------------------------------------------------------------------------*/
 
   plainTextToHtml(text: string): string {
-    return text ? `<p>${text.replace(/\n/gi, "</p><p>")}</p>` : '';
+    return text ? `<p>${text.replace(/\n/gi, '</p><p>')}</p>` : '';
   }
 
 }

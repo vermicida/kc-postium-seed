@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/empty';
 
-import { BackendUriProvider } from './../settings';
-import { CategoryBoxComponent } from './../category-box/category-box.component';
-import { NativeWindowProvider } from './../window';
-import { Post } from './../post';
-import { PostFormComponent } from './../post-form/post-form.component';
+import { CategoryBoxComponent } from '../category-box/category-box.component';
+import { NativeWindowProvider } from '../window';
+import { Post } from '../post';
+import { PostFormComponent } from '../post-form/post-form.component';
 import { PostDetailsComponent } from './post-details.component';
-import { PostService } from './../post.service';
-import { User } from './../user';
+import { PostService } from '../post.service';
+import { User } from '../user';
 
 class RouterStub { }
 
@@ -29,7 +28,7 @@ describe('PostDetailsComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
-        HttpModule
+        HttpClientModule
       ],
       declarations: [
         CategoryBoxComponent,
@@ -37,7 +36,6 @@ describe('PostDetailsComponent', () => {
         PostDetailsComponent
       ],
       providers: [
-        BackendUriProvider,
         NativeWindowProvider,
         PostService,
         { provide: ActivatedRoute, useClass: ActivatedRouteStub },
@@ -49,8 +47,8 @@ describe('PostDetailsComponent', () => {
   });
 
   it('Debería instanciarse', () => {
-    component.post = Post.fromJson({});
-    component.post.author = User.fromJson({});
+    component.post = {};
+    component.post.author = {};
     component.post.likes = [];
     fixture.detectChanges();
     expect(component).toBeTruthy();

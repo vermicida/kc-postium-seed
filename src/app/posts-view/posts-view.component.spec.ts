@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
 
-import { NativeWindowProvider } from './../window';
-import { PostPreviewComponent } from './../post-preview/post-preview.component';
-import { PostsListComponent } from './../posts-list/posts-list.component';
+import { NativeWindowProvider } from '../window';
+import { PostPreviewComponent } from '../post-preview/post-preview.component';
+import { PostsListComponent } from '../posts-list/posts-list.component';
 import { PostsViewComponent } from './posts-view.component';
 
 class RouterStub { }

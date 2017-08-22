@@ -1,34 +1,23 @@
 import { Injectable, Inject } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/map";
+import { HttpClient } from '@angular/common/http';
 
-import { BackendUri } from './settings';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
 import { Category } from './category';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class CategoryService {
 
-  constructor(
-    private _http: Http,
-    @Inject(BackendUri) private _backendUri) { }
+  constructor(private _http: HttpClient) { }
 
   getCategories(): Observable<Category[]> {
-    return this._http
-      .get(`${this._backendUri}/categories`)
-      .map((response: Response): Category[] => Category.fromJsonToList(response.json()));
+    return this._http.get<Category[]>(`${environment.backendUri}/categories`);
   }
 
   getCategory(id: number): Observable<Category> {
-    return this._http
-      .get(`${this._backendUri}/categories/${id}`)
-      .map((response: Response): Category => Category.fromJson(response.json()));
-  }
-
-  createCategory(category: Category): Observable<Category> {
-    return this._http
-      .post(`${this._backendUri}/categories`, category)
-      .map((response: Response): Category => Category.fromJson(response.json));
+    return this._http.get<Category>(`${environment.backendUri}/categories/${id}`);
   }
 
 }

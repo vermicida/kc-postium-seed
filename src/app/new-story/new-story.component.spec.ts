@@ -1,12 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-import { BackendUriProvider } from './../settings';
 import { NewStoryComponent } from './new-story.component';
-import { PostFormComponent } from './../post-form/post-form.component';
-import { PostService } from './../post.service';
+import { PostFormComponent } from '../post-form/post-form.component';
+import { PostService } from '../post.service';
 
 class RouterStub { }
 
@@ -19,14 +18,13 @@ describe('NewStoryComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
-        HttpModule
+        HttpClientModule
       ],
       declarations: [
         NewStoryComponent,
         PostFormComponent
       ],
       providers: [
-        BackendUriProvider,
         PostService,
         { provide: Router, useClass: RouterStub }
       ]
