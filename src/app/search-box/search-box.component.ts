@@ -27,7 +27,7 @@ export class SearchBoxComponent {
 
   @Output() onSearch: EventEmitter<string> = new EventEmitter();
 
-  searchInputAnimationState: string = 'hidden';
+  searchInputAnimationState = 'hidden';
 
   showSearchInput(): void {
     this.searchInputAnimationState = 'shown';

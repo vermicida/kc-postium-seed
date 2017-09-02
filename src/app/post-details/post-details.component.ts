@@ -29,20 +29,23 @@ export class PostDetailsComponent implements OnInit {
     return text ? `<p>${text.replace(/\n/gi, '</p><p>')}</p>` : '';
   }
 
-  /*---------------------------------------------------------------------------------------------------------------|
-   | ~~~ Red Path ~~~                                                                                              |
-   |---------------------------------------------------------------------------------------------------------------|
-   | Añade un manejador que navegue a la dirección correspondiente a los posts del autor indicado. Recuerda que    |
-   | para hacer esto necesitas inyectar como dependencia el Router de la app. La ruta a navegar es '/posts/users', |
-   | pasando como parámetro el identificador del autor.                                                            |
-   |---------------------------------------------------------------------------------------------------------------*/
+  /*=========================================================================|
+  | Red Path                                                                 |
+  |==========================================================================|
+  | Añade un manejador que navegue a la dirección correspondiente a los      |
+  | posts del autor indicado. Recuerda que para hacer esto necesitas         |
+  | inyectar como dependencia el Router de la app. La ruta a navegar es      |
+  | '/posts/users', pasando como parámetro el identificador del autor.       |
+  |=========================================================================*/
 
-  /*--------------------------------------------------------------------------------------------------------------------|
-   | ~~~ Yellow Path ~~~                                                                                                |
-   |--------------------------------------------------------------------------------------------------------------------|
-   | Añade un manejador que navegue a la dirección correspondiente a los posts de la categoría indicada. Recuerda que   |
-   | para hacer esto necesitas inyectar como dependencia el Router de la app. La ruta a navegar es '/posts/categories', |
-   | pasando como parámetro el identificador de la categoría.                                                           |
-   |--------------------------------------------------------------------------------------------------------------------*/
+  /*=========================================================================|
+  | Yellow Path                                                              |
+  |==========================================================================|
+  | Añade un manejador que navegue a la dirección correspondiente a los      |
+  | posts de la categoría indicada. Recuerda que para hacer esto necesitas   |
+  | inyectar como dependencia el Router de la app. La ruta a navegar es      |
+  | '/posts/categories', pasando como parámetro el identificador de la       |
+  | categoría.                                                               |
+  |=========================================================================*/
 
 }
