@@ -11,13 +11,13 @@ Lee detenidamente estas instrucciones **hasta el final**, las vas a necesitar pa
 Los **Paths** están distribuidos por colores. Cuando navegues por el código de **Postium** verás que existen comentarios relacionados con los distintos **Paths**; eso significa que tienes trabajo que hacer justo en esa pieza de código. Por ejemplo:
 
 ```typescript
-/*------------------------------------------------------------------|
- | ~~~ Blue Path ~~~                                                |
- |------------------------------------------------------------------|
- | Crea el pipe FromNowPipe. Su cometido es, partiendo de una fecha |
- | dada, retornar una cadena de texto que exprese el tiempo que ha  |
- | pasado desde dicha fecha hasta ahora.                            |
- |------------------------------------------------------------------*/
+/*=========================================================================|
+| Blue Path                                                                |
+|==========================================================================|
+| Crea el pipe FromNowPipe. Su cometido es, partiendo de una fecha dada,   |
+| retornar una cadena de texto que exprese el tiempo que ha pasado desde   |
+| dicha fecha hasta ahora.                                                 |
+|=========================================================================*/
 ```
 
 Visto ese comentario, y siempre que estés completando ese **Path** concreto al que se hace referencia, ponte el mono de trabajo y _¡al lío!_. En cualquier caso, más abajo en cada **Path** te explico en qué consiste y qué documentos requieren tu atención.
@@ -224,7 +224,7 @@ Al principio de los tiempos, cuando clonaste el repositorio de **Postium**, la a
 
 Menudo portal el **Postium** este, que te equivocas de imagen al crear una nueva historia y pones la de tu abuela en bikini en la playa de La Malagueta el año pasado, y ¡no puedes editar el post!. Tu abuela queda inmortalizada en la web hasta el día del juicio final por la tarde. No pasa nada, para eso estás tú, para darle una solución a este _problemilla_. ¿Podrías añadir a **Postium** la posibilidad de editar los posts que hayas creado con tu usuario?.
 
-**Pista:** recuerda que ya tienes un componente con un formulario de alta, quizá puedas editarlo.
+**Pista:** recuerda que ya tienes un componente con un formulario de alta, quizá puedas utilizarlo. Tampoco está de más que eches un ojo a la documentación de [Reactive Forms](https://angular.io/guide/reactive-forms).
 
 ### Brick Red Path (AKA Teja): Likes
 
