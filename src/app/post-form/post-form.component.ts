@@ -23,6 +23,7 @@ export class PostFormComponent {
     }
 
   private createForm() {
+
     /*=========================================================================|
     | Purple Path                                                              |
     |==========================================================================|
@@ -30,6 +31,7 @@ export class PostFormComponent {
     | las propiedades 'title', 'intro' y 'body' de los posts. Los dos primeros |
     | son obligatorios, así que recuerda añadir el validador oportuno.         |
     |=========================================================================*/
+
     this.postForm = this._formBuilder.group({});
   }
 
